@@ -1,0 +1,13 @@
+Welcome to Java program
+
+Nmae: Ashique
+
+Age:24
+
+Sex: Male
+
+Company: Mphasis
+
+Designation: Associate Software Engg
+
+Location: Bangalore

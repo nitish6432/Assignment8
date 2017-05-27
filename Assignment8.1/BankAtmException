@@ -1,0 +1,23 @@
+package myPack;
+
+public class BankATMException extends RuntimeException {// creating custom exception BankATMException which extends Runtime Exception
+
+
+
+	private String message;
+	 
+    public BankATMException(String message) {
+        this.message = message;
+    }
+ 
+    public BankATMException(Throwable cause, String message) {
+        super();
+        this.message = message;
+    }
+ 
+    public String getMessage() {
+        return message;
+    }
+
+}
+ 

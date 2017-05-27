@@ -1,0 +1,21 @@
+package Practice1;
+
+public class AgeIsNegative extends Exception {// creating AgeIsNegative exception by extending Exception class  and overriding toString() method
+	
+
+	    String errorMessage;
+	 
+	    public AgeIsNegative(String errorMessage)
+	    {
+	        this.errorMessage = errorMessage;
+	    }
+	 
+	    //Modifying toString() method to display customized error message
+	 
+	    @Override
+	    public String toString()
+	    {
+	        return errorMessage;
+	    }
+	}
+

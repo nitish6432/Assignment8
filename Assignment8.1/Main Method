@@ -1,0 +1,22 @@
+package myPack;
+
+public class UserDefinedException {
+	
+	 public static void main(String args[]) {// main method
+	        BankAtm acct = new BankAtm();// creating BankAtm object
+	        System.out.println("Welcome to BANK : " + acct.BankName());// prints bank name as specified
+	        System.out.println("Branch location : " + acct.Location());//prints branch location name as specified
+	        System.out.println("This ATM'S ID is: " + acct.atmID());//prints atmID as specified
+	        System.out.println("Current balance : " + acct.balance());//prints balance as specified without withdrawing or deposit
+	        System.out.println("Withdrawing Rs200");
+	        acct.withdraw(200);// calls withdraw method
+	        System.out.println("Current balance after withdraw : " + acct.balance());// prints balance after withdraw
+	        System.out.println("Depositing Rs4000");
+	        acct.deposit(4000);// calls deposit method
+	        System.out.println("Current balance after deposit : " + acct.balance());// prints balance after deposit
+	        
+	        
+	 
+	    }
+	 
+	}

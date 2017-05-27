@@ -1,0 +1,32 @@
+package Practice1;
+
+import java.util.Scanner;
+
+public class ExceptionHandling {// code to handle the defined exception AgeIsNegative
+	
+	public static void main(String[] args)
+    {
+          Scanner sc = new Scanner(System.in);  //Declaring Scanner variable to take input from user
+ 
+          System.out.println("Enter Your Age");
+ 
+          int age = sc.nextInt();         //Taking input from user
+ 
+          try// handling through try catch block
+          {
+              if(age < 0)
+              {
+                  throw new AgeIsNegative("NegativeAgeException");    //throws AgeIsNegativeException if age is negative
+              }
+              
+              else{
+            	  
+            	  System.out.println("Age is suitable");
+              }
+          }
+          catch(AgeIsNegative ex)
+          {
+              System.out.println(ex);    //Output : NegativeAgeException in case of negative age entry by user
+          }
+    }
+}

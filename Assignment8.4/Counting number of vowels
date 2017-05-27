@@ -1,0 +1,68 @@
+package myPack;
+import java.util.Scanner;
+
+		 
+	//program to count number of vowels present in MyInput text file
+
+		public class readData {
+	
+		    public static void main(String[] args) throws Exception {
+	
+		        // Creating a File instance of file which is present in D drive.
+	
+		        java.io.File file = new java.io.File("D:\\MyInputFile.txt");
+	
+		 
+	
+		        // Create a Scanner for the file
+	
+		        Scanner input = new Scanner(file);
+	
+		         
+	
+		        // Create the Content String       
+	
+		        String fileContent = "";
+	
+		 
+	
+		        // Read data from a file
+	
+		        while (input.hasNext()) {
+	
+		            fileContent += input.next() + " ";
+	
+		        }
+	
+		        // Close the file
+	
+		        input.close();
+
+		 
+	
+		        //Split the string into a character array
+	
+		        char[] charArr = fileContent.toCharArray();
+	
+	
+		        //loop through every character to find the vowels
+	
+		        int counter = 0;
+	
+		        for(char c : charArr)
+	
+		        {
+
+		              if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y')
+	
+		                   counter++;
+	
+		        }
+	
+		        
+	
+		        //Printing number of vowels present in MyInputFile
+	
+		        System.out.println("Number of Vowels: " + counter);
+
+}}

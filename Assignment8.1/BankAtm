@@ -1,0 +1,59 @@
+package myPack;
+
+public class BankAtm { // Creating BankAtm class with methods deposit() and withdraw()
+	
+	
+		 
+	    public int balance = 13000;
+	    public String BankName ="HDFC";
+	    String Location = "Bangalore";
+	    String atmID="9999";
+	    
+	    public String BankName(){
+	    	
+	    	return BankName;// returns BankName as enetered
+	    }
+	    
+        public String Location(){
+	    	
+	    	return Location;// returns Location as enetered
+	    }
+        
+        public String atmID(){
+	    	
+	    	return atmID;// returns atmID as enetered
+	    }
+	      
+	    public int balance() {
+	    	
+	        return balance;// returns balance as enetered
+	    }
+	 
+	    public void withdraw(int amount) throws BankATMException {// withdraw method which throws Exception if amount to be withdrawn is greater then balance or if balance is less then 10000
+	        if (amount > balance) {
+	            throw new BankATMException(String.format("Current balance %d is less than requested amount %d", balance, amount));
+	        }
+	        {
+	        if (balance<10000)
+	        	throw new BankATMException("Insufficient Fund");
+	    else
+	        	
+	        balance = balance - amount;
+	        }
+	    }
+
+	    public int deposit(int dep) {// if dep amount is less then
+	        if (dep <= 0) {
+	            throw new IllegalArgumentException(String.format("Invalid deposit amount %s", dep));
+	        }
+	        
+	        else {
+	        	
+	        	balance= balance+ dep;// dep amount added with balance and printed
+	        }
+			return balance;
+	    }
+	 
+	}
+
+
